@@ -7,73 +7,73 @@ const GalleryComponent: React.FC = () => {
 
   const galleryImages = [
     {
-      src: "/placeholder.svg?height=400&width=600&text=Campus+View",
-      alt: "Beautiful campus view",
+      src: "/school-campus-aerial.png",
+      alt: "Beautiful aerial view of Brightwood Academy campus",
       category: "Campus",
       title: "Main Campus Building"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Science+Lab",
-      alt: "Modern science laboratory",
+      src: "/science-laboratory.png",
+      alt: "Modern science laboratory at Brightwood Academy",
       category: "Facilities",
       title: "Advanced Science Laboratory"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Library",
-      alt: "Well-equipped library",
+      src: "/students-studying-library.png",
+      alt: "Students studying in the well-equipped library",
       category: "Facilities",
       title: "Digital Library & Resource Center"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Sports+Complex",
-      alt: "Sports facilities",
+      src: "/sports-activities.png",
+      alt: "Sports facilities and activities",
       category: "Sports",
       title: "Olympic Standard Sports Complex"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Classroom",
-      alt: "Smart classroom",
+      src: "/elementary-classroom.png",
+      alt: "Smart interactive classroom",
       category: "Academics",
       title: "Smart Interactive Classrooms"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Art+Room",
-      alt: "Art and craft room",
+      src: "/art-classroom.png",
+      alt: "Art and craft classroom",
       category: "Activities",
       title: "Creative Arts Studio"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Auditorium",
+      src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop&crop=center",
       alt: "School auditorium",
       category: "Facilities",
       title: "Multi-Purpose Auditorium"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Computer+Lab",
-      alt: "Computer laboratory",
+      src: "/science-experiment.png",
+      alt: "Students conducting science experiments",
       category: "Technology",
       title: "Advanced Computer Laboratory"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Playground",
+      src: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&h=400&fit=crop&crop=center",
       alt: "School playground",
       category: "Sports",
       title: "Outdoor Sports Ground"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Cafeteria",
+      src: "https://images.unsplash.com/photo-1567521464027-f127ff144326?w=600&h=400&fit=crop&crop=center",
       alt: "School cafeteria",
       category: "Facilities",
       title: "Hygienic Cafeteria"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Music+Room",
+      src: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop&crop=center",
       alt: "Music room",
       category: "Activities",
       title: "Music & Dance Studio"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Garden",
+      src: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop&crop=center",
       alt: "School garden",
       category: "Campus",
       title: "Botanical Garden"

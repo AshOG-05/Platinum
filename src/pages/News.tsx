@@ -1,5 +1,6 @@
 import type React from "react"
 import { Calendar, Bell, ArrowRight, Search, Filter } from "lucide-react"
+import LatestNews from "../components/LatestNews"
 
 const News: React.FC = () => {
   const newsItems = [
@@ -182,6 +183,9 @@ const News: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Latest News Component */}
+      <LatestNews />
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import type React from "react"
 import { CheckCircle, Download, Calendar, Users, FileText, CreditCard } from "lucide-react"
+import AdmissionProcess from "../components/AdmissionProcess"
 
 const Admission: React.FC = () => {
   const admissionProcess = [
@@ -192,6 +193,9 @@ const Admission: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Admission Process Component */}
+      <AdmissionProcess />
     </div>
   )
 }

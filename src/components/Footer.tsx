@@ -43,32 +43,32 @@ const Footer: React.FC = () => {
   ]
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
       {/* Main Footer */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* School Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center">
-                <GraduationCap className="text-white" size={24} />
+          <div className="lg:col-span-1 space-y-6">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center shadow-lg">
+                <GraduationCap className="text-white" size={28} />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white">Platinum Academy</h3>
-                <p className="text-gray-400 text-sm">Excellence in Education</p>
+                <h3 className="text-2xl font-bold text-white">Brightwood Academy</h3>
+                <p className="text-emerald-300 text-sm font-medium">Excellence in Education</p>
               </div>
             </div>
-            <p className="text-gray-400 mb-6 leading-relaxed">
-              Empowering minds and shaping futures since 1995 with world-class education and innovative teaching methods.
+            <p className="text-gray-300 leading-relaxed text-sm">
+              Empowering minds and shaping futures since 1995 with world-class education and innovative teaching methods that prepare students for global success.
             </p>
 
             {/* Social Links */}
-            <div className="flex space-x-3">
+            <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
-                  className={`w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center transition-all duration-200 transform hover:scale-110 ${social.color}`}
+                  className={`w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg border border-gray-700 hover:border-emerald-500 ${social.color}`}
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -78,16 +78,19 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-emerald-400">Quick Links</h4>
-            <ul className="space-y-2">
+          <div className="space-y-6">
+            <h4 className="text-xl font-bold mb-6 text-emerald-400 relative">
+              Quick Links
+              <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
+            </h4>
+            <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.path}
-                    className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group"
+                    className="text-gray-300 hover:text-emerald-400 transition-all duration-300 flex items-center group text-sm hover:translate-x-2"
                   >
-                    <span className="w-0 h-0.5 bg-emerald-500 transition-all duration-200 group-hover:w-4 mr-0 group-hover:mr-2"></span>
+                    <span className="w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-6 mr-0 group-hover:mr-3 rounded-full"></span>
                     {link.name}
                   </Link>
                 </li>
@@ -96,16 +99,19 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Programs */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-emerald-400">Programs</h4>
-            <ul className="space-y-2">
+          <div className="space-y-6">
+            <h4 className="text-xl font-bold mb-6 text-emerald-400 relative">
+              Programs
+              <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
+            </h4>
+            <ul className="space-y-3">
               {programs.map((program, index) => (
                 <li key={index}>
                   <Link
                     to={program.path}
-                    className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group"
+                    className="text-gray-300 hover:text-emerald-400 transition-all duration-300 flex items-center group text-sm hover:translate-x-2"
                   >
-                    <span className="w-0 h-0.5 bg-emerald-500 transition-all duration-200 group-hover:w-4 mr-0 group-hover:mr-2"></span>
+                    <span className="w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-6 mr-0 group-hover:mr-3 rounded-full"></span>
                     {program.name}
                   </Link>
                 </li>
@@ -114,40 +120,69 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-emerald-400">Contact</h4>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-2">
-                <Phone size={16} className="text-emerald-400" />
-                <span className="text-gray-400 text-sm">+91 98765 43210</span>
+          <div className="space-y-6">
+            <h4 className="text-xl font-bold mb-6 text-emerald-400 relative">
+              Contact Us
+              <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
+            </h4>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3 group">
+                <div className="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center group-hover:bg-emerald-500/30 transition-colors duration-300">
+                  <Phone size={18} className="text-emerald-400" />
+                </div>
+                <div>
+                  <p className="text-gray-300 text-sm font-medium">+91 98765 43210</p>
+                  <p className="text-gray-500 text-xs">Call us anytime</p>
+                </div>
               </div>
-              <div className="flex items-center space-x-2">
-                <Mail size={16} className="text-emerald-400" />
-                <span className="text-gray-400 text-sm">info@platinumacademy.edu</span>
+              <div className="flex items-center space-x-3 group">
+                <div className="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center group-hover:bg-emerald-500/30 transition-colors duration-300">
+                  <Mail size={18} className="text-emerald-400" />
+                </div>
+                <div>
+                  <p className="text-gray-300 text-sm font-medium">info@brightwoodacademy.edu</p>
+                  <p className="text-gray-500 text-xs">Send us an email</p>
+                </div>
               </div>
-              <div className="flex items-start space-x-2">
-                <MapPin size={16} className="text-emerald-400 mt-0.5" />
-                <span className="text-gray-400 text-sm">Sector 15, Gurgaon, Haryana</span>
+              <div className="flex items-start space-x-3 group">
+                <div className="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center group-hover:bg-emerald-500/30 transition-colors duration-300 mt-0.5">
+                  <MapPin size={18} className="text-emerald-400" />
+                </div>
+                <div>
+                  <p className="text-gray-300 text-sm font-medium">Sector 15, Gurgaon</p>
+                  <p className="text-gray-500 text-xs">Haryana, India</p>
+                </div>
               </div>
             </div>
 
             {/* Newsletter */}
-            <div className="mt-6">
-              <h5 className="font-semibold mb-3 text-emerald-400">Newsletter</h5>
-              <form onSubmit={handleNewsletterSubmit} className="flex">
+            <div className="mt-8">
+              <h5 className="font-bold mb-4 text-emerald-400">Stay Updated</h5>
+              <p className="text-gray-400 text-xs mb-4">Subscribe to our newsletter for latest updates and news.</p>
+              <form onSubmit={handleNewsletterSubmit} className="space-y-3">
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your email"
-                  className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-emerald-500 text-white text-sm"
+                  placeholder="Enter your email"
+                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 text-white text-sm placeholder-gray-500 transition-all duration-300"
                   required
                 />
                 <button
                   type="submit"
-                  className="px-3 py-2 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-r-lg hover:shadow-lg transition-all duration-200"
+                  className="w-full px-4 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-xl hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 font-medium text-sm flex items-center justify-center space-x-2"
                 >
-                  {isSubscribed ? <Star size={16} /> : <Send size={16} />}
+                  {isSubscribed ? (
+                    <>
+                      <Star size={16} />
+                      <span>Subscribed!</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send size={16} />
+                      <span>Subscribe</span>
+                    </>
+                  )}
                 </button>
               </form>
             </div>
@@ -158,22 +193,40 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-gray-800">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © 2024 Platinum Academy. All rights reserved. | CBSE Affiliation No: 3430XXX
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+      <div className="border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-center md:text-left">
+              <p className="text-gray-400 text-sm font-medium">
+                © 2024 Brightwood Academy. All rights reserved.
+              </p>
+              <p className="text-gray-500 text-xs mt-1">
+                CBSE Affiliation No: 3430XXX | Estd. 1995
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center md:justify-end items-center space-x-6">
+              <Link
+                to="#"
+                className="text-gray-400 hover:text-emerald-400 text-sm transition-all duration-300 hover:underline underline-offset-4"
+              >
                 Privacy Policy
               </Link>
-              <Link to="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+              <Link
+                to="#"
+                className="text-gray-400 hover:text-emerald-400 text-sm transition-all duration-300 hover:underline underline-offset-4"
+              >
                 Terms of Service
               </Link>
-              <Link to="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+              <Link
+                to="#"
+                className="text-gray-400 hover:text-emerald-400 text-sm transition-all duration-300 hover:underline underline-offset-4"
+              >
                 Sitemap
               </Link>
+              <div className="flex items-center space-x-2 text-gray-500">
+                <Shield size={14} />
+                <span className="text-xs">Secure & Safe</span>
+              </div>
             </div>
           </div>
         </div>

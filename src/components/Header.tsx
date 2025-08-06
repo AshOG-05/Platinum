@@ -137,12 +137,16 @@ const Header: React.FC = () => {
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group">
-              <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
-                <GraduationCap className="text-white" size={28} />
+              <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 p-2">
+                <img
+                  src="/images/brightwood-logo.png"
+                  alt="Brightwood Academy Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                  Platinum Academy
+                  Brightwood Academy
                 </h1>
                 <p className="text-sm text-gray-600 font-medium">Excellence in Education Since 1995</p>
               </div>
@@ -420,7 +424,7 @@ const Header: React.FC = () => {
                     <Mail size={20} className="text-emerald-600" />
                     <div className="text-left">
                       <div className="font-semibold text-gray-800">General Inquiries</div>
-                      <div className="text-emerald-600 text-sm">info@platinumacademy.edu</div>
+                      <div className="text-emerald-600 text-sm">info@brightwoodacademy.edu</div>
                     </div>
                   </div>
                   <div className="text-emerald-600 group-hover:translate-x-1 transition-transform duration-200">
@@ -436,7 +440,7 @@ const Header: React.FC = () => {
                     <Mail size={20} className="text-emerald-600" />
                     <div className="text-left">
                       <div className="font-semibold text-gray-800">Admissions</div>
-                      <div className="text-emerald-600 text-sm">admissions@platinumacademy.edu</div>
+                      <div className="text-emerald-600 text-sm">admissions@brightwoodacademy.edu</div>
                     </div>
                   </div>
                   <div className="text-emerald-600 group-hover:translate-x-1 transition-transform duration-200">
@@ -452,7 +456,7 @@ const Header: React.FC = () => {
                     <Mail size={20} className="text-emerald-600" />
                     <div className="text-left">
                       <div className="font-semibold text-gray-800">Careers</div>
-                      <div className="text-emerald-600 text-sm">careers@platinumacademy.edu</div>
+                      <div className="text-emerald-600 text-sm">careers@brightwoodacademy.edu</div>
                     </div>
                   </div>
                   <div className="text-emerald-600 group-hover:translate-x-1 transition-transform duration-200">
@@ -468,7 +472,7 @@ const Header: React.FC = () => {
                     <Mail size={20} className="text-emerald-600" />
                     <div className="text-left">
                       <div className="font-semibold text-gray-800">Technical Support</div>
-                      <div className="text-emerald-600 text-sm">support@platinumacademy.edu</div>
+                      <div className="text-emerald-600 text-sm">support@brightwoodacademy.edu</div>
                     </div>
                   </div>
                   <div className="text-emerald-600 group-hover:translate-x-1 transition-transform duration-200">

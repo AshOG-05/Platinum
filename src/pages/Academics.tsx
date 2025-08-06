@@ -1,5 +1,6 @@
 import type React from "react"
 import { BookOpen, Award, Users, Clock, CheckCircle, Star } from "lucide-react"
+import AcademicPrograms from "../components/AcademicPrograms"
 
 const Academics: React.FC = () => {
   const programs = [
@@ -130,7 +131,10 @@ const Academics: React.FC = () => {
                     className={`bg-gradient-to-br ${program.color.replace("from-", "from-").replace("to-", "to-")} bg-opacity-10 rounded-3xl p-8 shadow-lg`}
                   >
                     <img
-                      src={`/placeholder_image.png?height=300&width=400&text=${program.level.replace(" ", "+")}`}
+                      src={index === 0 ? "/elementary-classroom.png" :
+                           index === 1 ? "/students-classroom-learning.png" :
+                           index === 2 ? "/science-laboratory.png" :
+                           "/graduation-ceremony.png"}
                       alt={program.level}
                       className="w-full h-64 object-cover rounded-2xl shadow-lg"
                     />
@@ -185,6 +189,9 @@ const Academics: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Academic Programs Component */}
+      <AcademicPrograms />
     </div>
   )
 }

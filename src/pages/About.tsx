@@ -1,5 +1,6 @@
 import type React from "react"
 import { CheckCircle, Award, Users, BookOpen, Target, Heart } from "lucide-react"
+import Testimonials from "../components/Testimonials"
 
 const About: React.FC = () => {
   const achievements = [
@@ -43,10 +44,10 @@ const About: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-              About Platinum Academy
+              About Brightwood Academy
             </h1>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Established in 1995, Platinum Academy has been a beacon of educational excellence in Gurgaon,
+              Established in 1995, Brightwood Academy has been a beacon of educational excellence in Gurgaon,
               Haryana, committed to empowering minds and shaping futures through world-class education.
             </p>
           </div>
@@ -61,7 +62,7 @@ const About: React.FC = () => {
             <div>
               <h2 className="text-4xl font-bold mb-6 text-gray-800">Our Story</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Founded with a vision to provide world-class education that prepares students for global success, Platinum Academy began its journey in
+                Founded with a vision to provide world-class education that prepares students for global success, Brightwood Academy began its journey in
                 1995 with just a handful of students and dedicated teachers. Today, we stand proud as one of the most
                 respected educational institutions in the NCR region.
               </p>
@@ -86,8 +87,8 @@ const About: React.FC = () => {
             <div className="relative">
               <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-3xl p-8 shadow-2xl">
                 <img
-                  src="/placeholder.svg?height=400&width=500&text=School+Building"
-                  alt="JVM Shyamali Campus"
+                  src="/modern-school-campus.png"
+                  alt="Brightwood Academy Campus"
                   className="w-full h-80 object-cover rounded-2xl shadow-lg"
                 />
               </div>
@@ -153,6 +154,9 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Component */}
+      <Testimonials />
     </div>
   )
 }

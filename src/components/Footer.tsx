@@ -3,7 +3,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import {
   Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin, GraduationCap,
-  Clock, Award, Users, BookOpen, Send, ArrowRight, Star, Shield, Globe
+  Send,  Star, Shield,
 } from "lucide-react"
 
 const Footer: React.FC = () => {

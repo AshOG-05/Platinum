@@ -1,6 +1,6 @@
 import type React from "react"
 import { useState } from "react"
-import { Trophy, Star, Award, TrendingUp, Download, Search, Filter } from "lucide-react"
+import { Trophy, Star, Award, TrendingUp, Download,  Filter } from "lucide-react"
 
 const Results: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState("2024")

@@ -7,28 +7,28 @@ const StudentLife: React.FC = () => {
       icon: <Trophy size={32} />,
       title: "Sports & Athletics",
       description: "Cricket, Football, Basketball, Badminton, Athletics, and more competitive sports.",
-      image: "/placeholder.svg?height=200&width=300&text=Sports",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&crop=center",
       color: "from-blue-500 to-indigo-500",
     },
     {
       icon: <Music size={32} />,
       title: "Music & Dance",
       description: "Classical and modern music, dance forms, choir, and musical instrument training.",
-      image: "/placeholder.svg?height=200&width=300&text=Music",
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&crop=center",
       color: "from-purple-500 to-pink-500",
     },
     {
       icon: <Palette size={32} />,
       title: "Arts & Crafts",
       description: "Painting, drawing, sculpture, pottery, and various creative art forms.",
-      image: "/placeholder.svg?height=200&width=300&text=Arts",
+      image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400&h=250&fit=crop&crop=center",
       color: "from-emerald-500 to-teal-500",
     },
     {
       icon: <Users size={32} />,
       title: "Clubs & Societies",
       description: "Science club, literary society, debate club, environmental club, and more.",
-      image: "/placeholder.svg?height=200&width=300&text=Clubs",
+      image: "https://images.unsplash.com/photo-1556721546-9918b5b57fa2?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       color: "from-amber-500 to-orange-500",
     },
   ]
@@ -38,25 +38,25 @@ const StudentLife: React.FC = () => {
       title: "Annual Sports Day",
       description: "Inter-house competitions, athletic meets, and sports celebrations.",
       date: "December 2024",
-      image: "/placeholder.svg?height=150&width=200&text=Sports+Day",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop&crop=center",
     },
     {
       title: "Cultural Festival",
       description: "Music, dance, drama performances, and cultural exhibitions.",
       date: "January 2025",
-      image: "/placeholder.svg?height=150&width=200&text=Cultural+Fest",
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=200&fit=crop&crop=center",
     },
     {
       title: "Science Exhibition",
       description: "Student projects, innovations, and scientific demonstrations.",
       date: "February 2025",
-      image: "/placeholder.svg?height=150&width=200&text=Science+Fair",
+      image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=300&h=200&fit=crop&crop=center",
     },
     {
       title: "Annual Day Celebration",
       description: "Grand celebration showcasing student talents and achievements.",
       date: "March 2025",
-      image: "/placeholder.svg?height=150&width=200&text=Annual+Day",
+      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=300&h=200&fit=crop&crop=center",
     },
   ]
 
@@ -202,7 +202,7 @@ const StudentLife: React.FC = () => {
             <div className="relative">
               <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-3xl p-8 shadow-2xl">
                 <img
-                  src="/placeholder.svg?height=400&width=500&text=Student+Activities"
+                  src="https://plus.unsplash.com/premium_photo-1723485703457-6a39f2c44ee6?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Student Activities"
                   className="w-full h-80 object-cover rounded-2xl shadow-lg"
                 />

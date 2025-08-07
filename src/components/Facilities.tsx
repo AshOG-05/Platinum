@@ -8,42 +8,42 @@ const Facilities: React.FC = () => {
       title: "Science Laboratories",
       description: "State-of-the-art Physics, Chemistry, and Biology labs with modern equipment and safety protocols.",
       features: ["Digital microscopes", "Interactive models", "Safety equipment", "Research facilities"],
-      image: "/placeholder.svg?height=300&width=400&text=Science+Lab",
+      image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&h=300&fit=crop&crop=center",
     },
     {
       icon: Monitor,
       title: "Computer Labs",
       description: "Modern computer labs with latest hardware and software for programming and digital literacy.",
       features: ["Latest computers", "High-speed internet", "Programming software", "Robotics kits"],
-      image: "/placeholder.svg?height=300&width=400&text=Computer+Lab",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop&crop=center",
     },
     {
       icon: BookOpen,
       title: "Library & Resource Center",
       description: "Extensive collection of books, digital resources, and quiet study spaces for research and reading.",
       features: ["50,000+ books", "Digital library", "Study rooms", "Research databases"],
-      image: "/placeholder.svg?height=300&width=400&text=Library",
+      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop&crop=center",
     },
     {
       icon: Gamepad2,
       title: "Sports Complex",
       description: "Olympic-standard sports facilities including swimming pool, courts, and professional coaching.",
       features: ["Swimming pool", "Basketball courts", "Football ground", "Indoor games"],
-      image: "/placeholder.svg?height=300&width=400&text=Sports+Complex",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center",
     },
     {
       icon: Utensils,
       title: "Cafeteria & Kitchen",
       description: "Hygienic kitchen and spacious cafeteria serving nutritious meals and healthy snacks.",
       features: ["Nutritious meals", "Hygienic preparation", "Dietary options", "Fresh ingredients"],
-      image: "/placeholder.svg?height=300&width=400&text=Cafeteria",
+      image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop&crop=center",
     },
     {
       icon: Heart,
       title: "Medical Center",
       description: "On-campus medical facility with qualified nurses and tie-ups with nearby hospitals.",
       features: ["Qualified nurses", "First aid", "Health checkups", "Emergency care"],
-      image: "/placeholder.svg?height=300&width=400&text=Medical+Center",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop&crop=center",
     },
   ]
 
@@ -78,7 +78,7 @@ const Facilities: React.FC = () => {
             World-Class <span className="text-emerald-600">Facilities</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our modern infrastructure and state-of-the-art facilities create an ideal environment for learning, 
+            Our modern infrastructure and state-of-the-art facilities create an ideal environment for learning,
             growth, and overall development of our students.
           </p>
         </div>
@@ -100,11 +100,11 @@ const Facilities: React.FC = () => {
                   <facility.icon className="w-6 h-6 text-emerald-600" />
                 </div>
               </div>
-              
+
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">{facility.title}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{facility.description}</p>
-                
+
                 <div>
                   <h4 className="text-sm font-semibold text-gray-800 mb-3">Key Features:</h4>
                   <div className="grid grid-cols-2 gap-2">

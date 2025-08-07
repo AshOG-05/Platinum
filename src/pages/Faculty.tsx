@@ -31,7 +31,7 @@ const Faculty: React.FC = () => {
       qualification: "M.A. English Literature, B.Ed.",
       experience: "18+ years",
       subjects: ["English Literature", "Creative Writing"],
-      image: "https://images.unsplash.com/photo-1494790108755-2616c6106db4?w=300&h=300&fit=crop&crop=face",
+      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop&crop=face",
       email: "english@brightwoodacademy.edu",
       phone: "+91 98765 43212",
       achievements: ["Literary Excellence Award", "Best English Teacher"],

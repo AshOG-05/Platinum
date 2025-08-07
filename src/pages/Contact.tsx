@@ -206,15 +206,21 @@ const Contact: React.FC = () => {
 
             {/* Map and Additional Info */}
             <div className="space-y-8">
-              {/* Map Placeholder */}
+              {/* Map */}
               <div className="bg-white rounded-3xl p-8 shadow-2xl">
                 <h3 className="text-2xl font-bold mb-6 text-gray-800">Find Us</h3>
-                <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-2xl h-64 flex items-center justify-center mb-6">
-                  <div className="text-center">
-                    <MapPin size={48} className="text-emerald-500 mx-auto mb-4" />
-                    <p className="text-gray-600 font-medium">Interactive Map</p>
-                    <p className="text-sm text-gray-500">JVM Shyamali, Ranchi</p>
-                  </div>
+                <div className="rounded-2xl overflow-hidden shadow-lg mb-6">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58451.89707091969!2d85.26495!3d23.344315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e104aa5b7c5b%3A0x6822c7ed587dc0e5!2sShyamali%2C%20Ranchi%2C%20Jharkhand%20834002!5e0!3m2!1sen!2sin!4v1704715200000!5m2!1sen!2sin"
+                    width="100%"
+                    height="300"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-80"
+                    title="JVM Shyamali Location - Ranchi, Jharkhand, India"
+                  ></iframe>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-start space-x-3">

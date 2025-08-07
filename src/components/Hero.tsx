@@ -34,16 +34,16 @@ const Hero: React.FC = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row gap-6 mb-12">
               <Link
                 to="/admission"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-2xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:from-emerald-600 hover:to-teal-700 text-lg"
               >
                 <span>Start Admission</span>
-                <ArrowRight className="ml-2" size={20} />
+                <ArrowRight className="ml-3" size={22} />
               </Link>
-              <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-emerald-500 text-emerald-600 font-semibold rounded-xl hover:bg-emerald-50 transition-all duration-300">
-                <Play className="mr-2" size={20} />
+              <button className="inline-flex items-center justify-center px-10 py-5 border-2 border-emerald-500 text-emerald-600 font-semibold rounded-2xl hover:bg-emerald-50 transition-all duration-300 hover:border-emerald-600 text-lg">
+                <Play className="mr-3" size={22} />
                 Virtual Tour
               </button>
             </div>
@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
           <div className="relative">
             <div className="relative bg-gradient-to-br from-emerald-100 to-teal-100 rounded-3xl p-8 shadow-2xl">
               <img
-                src="/placeholder.svg?height=500&width=600&text=Students+Learning"
+                src="https://images.unsplash.com/photo-1614793319738-bde496bbe85e?q=80&w=2350&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Students in classroom"
                 className="w-full h-96 object-cover rounded-2xl shadow-lg"
               />

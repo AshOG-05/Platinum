@@ -9,7 +9,7 @@ const Features: React.FC = () => {
       description: "CBSE curriculum with innovative teaching methods and personalized attention for every student.",
       color: "from-emerald-500 to-teal-500",
       bgColor: "bg-emerald-50",
-      image: "/students-classroom-learning.png",
+      image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=400&h=300&fit=crop&crop=center",
     },
     {
       icon: <Trophy size={32} />,
@@ -49,7 +49,7 @@ const Features: React.FC = () => {
       description: "Well-equipped library, digital resources, and modern infrastructure.",
       color: "from-cyan-500 to-teal-500",
       bgColor: "bg-cyan-50",
-      image: "/students-studying-library.png",
+      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop&crop=center",
     },
     {
       icon: <Microscope size={32} />,
@@ -57,7 +57,7 @@ const Features: React.FC = () => {
       description: "Advanced Science, Technology, Engineering, and Mathematics programs with hands-on learning.",
       color: "from-purple-500 to-indigo-500",
       bgColor: "bg-purple-50",
-      image: "/science-laboratory.png",
+      image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&h=300&fit=crop&crop=center",
     },
     {
       icon: <Palette size={32} />,
@@ -65,7 +65,7 @@ const Features: React.FC = () => {
       description: "Comprehensive arts program including visual arts, drama, and creative writing workshops.",
       color: "from-pink-500 to-rose-500",
       bgColor: "bg-pink-50",
-      image: "/art-classroom.png",
+      image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400&h=300&fit=crop&crop=center",
     },
     {
       icon: <Music size={32} />,

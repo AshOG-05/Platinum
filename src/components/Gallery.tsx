@@ -7,37 +7,37 @@ const GalleryComponent: React.FC = () => {
 
   const galleryImages = [
     {
-      src: "/school-campus-aerial.png",
-      alt: "Beautiful aerial view of Brightwood Academy campus",
+      src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop&crop=center",
+      alt: "Beautiful aerial view of Platinum Academy campus",
       category: "Campus",
       title: "Main Campus Building"
     },
     {
-      src: "/science-laboratory.png",
-      alt: "Modern science laboratory at Brightwood Academy",
+      src: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop&crop=center",
+      alt: "Modern science laboratory at Platinum Academy",
       category: "Facilities",
       title: "Advanced Science Laboratory"
     },
     {
-      src: "/students-studying-library.png",
+      src: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop&crop=center",
       alt: "Students studying in the well-equipped library",
       category: "Facilities",
       title: "Digital Library & Resource Center"
     },
     {
-      src: "/sports-activities.png",
+      src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center",
       alt: "Sports facilities and activities",
       category: "Sports",
       title: "Olympic Standard Sports Complex"
     },
     {
-      src: "/elementary-classroom.png",
+      src: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&h=400&fit=crop&crop=center",
       alt: "Smart interactive classroom",
       category: "Academics",
       title: "Smart Interactive Classrooms"
     },
     {
-      src: "/art-classroom.png",
+      src: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=600&h=400&fit=crop&crop=center",
       alt: "Art and craft classroom",
       category: "Activities",
       title: "Creative Arts Studio"
@@ -83,8 +83,8 @@ const GalleryComponent: React.FC = () => {
   const categories = ["All", "Campus", "Facilities", "Academics", "Sports", "Activities", "Technology"]
   const [activeCategory, setActiveCategory] = useState("All")
 
-  const filteredImages = activeCategory === "All" 
-    ? galleryImages 
+  const filteredImages = activeCategory === "All"
+    ? galleryImages
     : galleryImages.filter(img => img.category === activeCategory)
 
   const openLightbox = (index: number) => {
@@ -125,11 +125,10 @@ const GalleryComponent: React.FC = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                activeCategory === category
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${activeCategory === category
                   ? "bg-emerald-600 text-white shadow-lg"
                   : "bg-gray-100 text-gray-700 hover:bg-emerald-100 hover:text-emerald-600"
-              }`}
+                }`}
             >
               {category}
             </button>
@@ -173,7 +172,7 @@ const GalleryComponent: React.FC = () => {
                 alt={filteredImages[selectedImage].alt}
                 className="max-w-full max-h-full object-contain rounded-lg"
               />
-              
+
               {/* Close Button */}
               <button
                 onClick={closeLightbox}
@@ -189,7 +188,7 @@ const GalleryComponent: React.FC = () => {
               >
                 <ChevronLeft size={24} />
               </button>
-              
+
               <button
                 onClick={nextImage}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors duration-200"

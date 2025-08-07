@@ -87,7 +87,7 @@ const About: React.FC = () => {
             <div className="relative">
               <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-3xl p-8 shadow-2xl">
                 <img
-                  src="/modern-school-campus.png"
+                  src="https://images.unsplash.com/photo-1726390414016-1db55276c6ff?q=80&w=1421&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Brightwood Academy Campus"
                   className="w-full h-80 object-cover rounded-2xl shadow-lg"
                 />

@@ -50,8 +50,8 @@ const About: React.FC = () => {
           <div className="relative">
             <div className="relative z-10 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-8">
               <img
-                src="/modern-school-students.png"
-                alt="School Building"
+                src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop&crop=center"
+                alt="Modern School Building"
                 className="w-full h-80 object-cover rounded-xl shadow-lg"
               />
             </div>

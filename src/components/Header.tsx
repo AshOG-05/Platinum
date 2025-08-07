@@ -27,6 +27,7 @@ const Header: React.FC = () => {
       }
     }
 
+    // Only add click listener for mobile or when not hovering
     document.addEventListener('click', handleClickOutside)
     return () => document.removeEventListener('click', handleClickOutside)
   }, [])
@@ -129,9 +130,8 @@ const Header: React.FC = () => {
 
       {/* Main Header */}
       <header
-        className={`sticky top-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-white/95 backdrop-blur-md shadow-xl" : "bg-white shadow-md"
-        }`}
+        className={`sticky top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-xl" : "bg-white shadow-md"
+          }`}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
@@ -139,8 +139,8 @@ const Header: React.FC = () => {
             <Link to="/" className="flex items-center space-x-3 group">
               <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 p-2">
                 <img
-                  src="/images/brightwood-logo.png"
-                  alt="Brightwood Academy Logo"
+                  src="https://plus.unsplash.com/premium_photo-1668902827064-9d77c9750674?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Platinum Academy Logo"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -148,39 +148,38 @@ const Header: React.FC = () => {
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
                   Brightwood Academy
                 </h1>
-                <p className="text-sm text-gray-600 font-medium">Excellence in Education Since 1995</p>
               </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-2">
+            <nav className="hidden lg:flex items-center space-x-4">
               {navItems.map((item) => (
                 <div key={item.name} className="relative group dropdown-container">
                   {item.dropdown ? (
-                    <div className="relative dropdown-container">
+                    <div
+                      className="relative dropdown-container"
+                      onMouseEnter={() => setActiveDropdown(item.name)}
+                      onMouseLeave={() => setActiveDropdown(null)}
+                    >
                       <button
-                        onClick={() => handleDropdownToggle(item.name)}
-                        className={`flex items-center space-x-1 px-4 py-3 rounded-xl font-medium transition-all duration-300 relative ${
-                          location.pathname === item.path || activeDropdown === item.name
-                            ? "text-emerald-600 bg-emerald-50 shadow-md"
-                            : "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50"
-                        }`}
+                        className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 relative ${location.pathname === item.path || activeDropdown === item.name
+                          ? "text-emerald-600 bg-emerald-50 shadow-md"
+                          : "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50"
+                          }`}
                       >
                         <span>{item.name}</span>
                         <ChevronDown
                           size={16}
-                          className={`transition-transform duration-200 ${
-                            activeDropdown === item.name ? "rotate-180" : ""
-                          }`}
+                          className={`transition-transform duration-200 ${activeDropdown === item.name ? "rotate-180" : ""
+                            }`}
                         />
                       </button>
 
                       {/* Dropdown Menu */}
-                      <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 ${
-                        activeDropdown === item.name
-                          ? "opacity-100 visible transform translate-y-0"
-                          : "opacity-0 invisible transform -translate-y-2"
-                      }`}>
+                      <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 ${activeDropdown === item.name
+                        ? "opacity-100 visible transform translate-y-0"
+                        : "opacity-0 invisible transform -translate-y-2"
+                        }`}>
                         <div className="py-2">
                           {item.dropdown.map((dropdownItem, index) => (
                             <Link
@@ -201,11 +200,10 @@ const Header: React.FC = () => {
                   ) : (
                     <Link
                       to={item.path}
-                      className={`px-4 py-3 rounded-xl font-medium transition-all duration-300 relative ${
-                        location.pathname === item.path
-                          ? "text-emerald-600 bg-emerald-50 shadow-md"
-                          : "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50"
-                      }`}
+                      className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 relative ${location.pathname === item.path
+                        ? "text-emerald-600 bg-emerald-50 shadow-md"
+                        : "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50"
+                        }`}
                     >
                       {item.name}
                     </Link>
@@ -214,7 +212,7 @@ const Header: React.FC = () => {
               ))}
 
               {/* CTA Button */}
-              <div className="ml-6 flex items-center space-x-3">
+              <div className="ml-8 flex items-center space-x-3">
                 <Link
                   to="/admission"
                   className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:from-emerald-600 hover:to-teal-700"
@@ -240,37 +238,33 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden transition-all duration-500 ${
-            isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
-          } overflow-hidden bg-gradient-to-br from-white to-emerald-50 border-t border-emerald-100`}
+          className={`lg:hidden transition-all duration-500 ${isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+            } overflow-hidden bg-gradient-to-br from-white to-emerald-50 border-t border-emerald-100`}
         >
-          <nav className="container mx-auto px-4 py-6 space-y-1">
+          <nav className="container mx-auto px-4 py-6 space-y-2">
             {navItems.map((item) => (
               <div key={item.name}>
                 {item.dropdown ? (
                   <div>
                     <button
                       onClick={() => handleDropdownToggle(`mobile-${item.name}`)}
-                      className={`w-full flex items-center justify-between px-4 py-4 rounded-xl font-medium transition-all duration-200 ${
-                        location.pathname === item.path || activeDropdown === `mobile-${item.name}`
-                          ? "text-emerald-600 bg-emerald-100 shadow-md"
-                          : "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50"
-                      }`}
+                      className={`w-full flex items-center justify-between px-6 py-4 rounded-xl font-medium transition-all duration-200 ${location.pathname === item.path || activeDropdown === `mobile-${item.name}`
+                        ? "text-emerald-600 bg-emerald-100 shadow-md"
+                        : "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50"
+                        }`}
                     >
                       <span>{item.name}</span>
                       <ChevronDown
                         size={16}
-                        className={`transition-transform duration-200 ${
-                          activeDropdown === `mobile-${item.name}` ? "rotate-180" : ""
-                        }`}
+                        className={`transition-transform duration-200 ${activeDropdown === `mobile-${item.name}` ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
 
                     {/* Mobile Dropdown */}
-                    <div className={`overflow-hidden transition-all duration-300 ${
-                      activeDropdown === `mobile-${item.name}` ? "max-h-48 mt-2" : "max-h-0"
-                    }`}>
-                      <div className="pl-4 space-y-1">
+                    <div className={`overflow-hidden transition-all duration-300 ${activeDropdown === `mobile-${item.name}` ? "max-h-48 mt-2" : "max-h-0"
+                      }`}>
+                      <div className="pl-6 space-y-1">
                         {item.dropdown.map((dropdownItem, index) => (
                           <Link
                             key={index}
@@ -279,7 +273,7 @@ const Header: React.FC = () => {
                               setIsMenuOpen(false)
                               closeDropdown()
                             }}
-                            className="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200"
+                            className="flex items-center space-x-3 px-6 py-3 text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200"
                           >
                             <div className="w-6 h-6 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-600">
                               {dropdownItem.icon}
@@ -293,11 +287,10 @@ const Header: React.FC = () => {
                 ) : (
                   <Link
                     to={item.path}
-                    className={`block px-4 py-4 rounded-xl font-medium transition-all duration-200 ${
-                      location.pathname === item.path
-                        ? "text-emerald-600 bg-emerald-100 shadow-md"
-                        : "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50"
-                    }`}
+                    className={`block px-6 py-4 rounded-xl font-medium transition-all duration-200 ${location.pathname === item.path
+                      ? "text-emerald-600 bg-emerald-100 shadow-md"
+                      : "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50"
+                      }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}

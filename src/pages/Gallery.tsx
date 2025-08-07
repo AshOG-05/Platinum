@@ -8,84 +8,84 @@ const Gallery: React.FC = () => {
 
   const photoGallery = [
     {
-      src: "/placeholder.svg?height=400&width=600&text=Campus+Aerial+View",
+      src: "https://images.unsplash.com/photo-1527891751199-7225231a68dd?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "Beautiful aerial view of campus",
       category: "Campus",
       title: "Aerial Campus View",
       date: "2024-12-01"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Science+Fair+2024",
+      src: "https://images.unsplash.com/photo-1622646992037-9114dc01dd03?q=80&w=2350&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "Students presenting science projects",
       category: "Events",
       title: "Annual Science Fair 2024",
       date: "2024-11-15"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Sports+Day",
+      src: "https://images.unsplash.com/photo-1621998014874-a6edfb5f9bc7?q=80&w=2338&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "Students participating in sports",
       category: "Sports",
       title: "Inter-House Sports Championship",
       date: "2024-10-20"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Cultural+Program",
+      src: "https://images.unsplash.com/photo-1463592177119-bab2a00f3ccb?q=80&w=2338&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "Cultural performance by students",
       category: "Cultural",
       title: "Annual Cultural Festival",
       date: "2024-12-15"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Graduation+Ceremony",
+      src: "https://images.unsplash.com/photo-1591218214141-45545921d2d9?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "Graduation ceremony",
       category: "Academic",
       title: "Class XII Graduation 2024",
       date: "2024-03-30"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Library+Reading",
+      src: "https://images.unsplash.com/photo-1602114324271-08ea0e9f7a95?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "Students reading in library",
       category: "Academic",
       title: "Library Study Session",
       date: "2024-09-10"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Art+Exhibition",
+      src: "https://plus.unsplash.com/premium_photo-1683140765647-e3d53b88e69c?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "Student art exhibition",
       category: "Cultural",
       title: "Student Art Exhibition",
       date: "2024-08-25"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Computer+Lab",
+      src: "https://images.unsplash.com/photo-1719159381981-1327b22aff9b?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "Students in computer lab",
       category: "Academic",
       title: "Computer Programming Class",
       date: "2024-07-15"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Music+Concert",
+      src: "https://plus.unsplash.com/premium_photo-1703618159183-0e34e2304a5c?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "School music concert",
       category: "Cultural",
       title: "Annual Music Concert",
       date: "2024-06-20"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Field+Trip",
-      alt: "Educational field trip",
+      src: "https://plus.unsplash.com/premium_photo-1683841528606-c51a3d7002ba?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      alt: "",
       category: "Events",
       title: "Educational Field Trip",
       date: "2024-05-10"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Swimming+Pool",
+      src: "https://images.unsplash.com/photo-1560090995-01632a28895b?q=80&w=2338&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "Swimming competition",
       category: "Sports",
       title: "Swimming Championship",
       date: "2024-04-18"
     },
     {
-      src: "/placeholder.svg?height=400&width=600&text=Robotics+Club",
+      src: "https://plus.unsplash.com/premium_photo-1716396589811-69274847ce9f?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "Robotics club activity",
       category: "Academic",
       title: "Robotics Club Workshop",
@@ -102,21 +102,21 @@ const Gallery: React.FC = () => {
       date: "2024-12-01"
     },
     {
-      thumbnail: "/placeholder.svg?height=300&width=400&text=Annual+Day+Video",
+      thumbnail: "https://images.unsplash.com/photo-1621998014874-a6edfb5f9bc7?q=80&w=2338&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Annual Day Celebration Highlights",
       duration: "12:45",
       category: "Events",
       date: "2024-12-15"
     },
     {
-      thumbnail: "/placeholder.svg?height=300&width=400&text=Sports+Highlights",
+      thumbnail: "https://images.unsplash.com/photo-1553079358-a1f7fdc539c5?q=80&w=2348&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Sports Championship Highlights",
       duration: "8:20",
       category: "Sports",
       date: "2024-10-20"
     },
     {
-      thumbnail: "/placeholder.svg?height=300&width=400&text=Science+Fair+Video",
+      thumbnail: "https://images.unsplash.com/photo-1514720822943-e1625ae92198?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Science Fair 2024 - Student Innovations",
       duration: "15:10",
       category: "Academic",

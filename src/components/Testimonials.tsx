@@ -6,7 +6,7 @@ const Testimonials: React.FC = () => {
     {
       name: "Priya Sharma",
       role: "Parent of Class 10 Student",
-      image: "/placeholder.svg?height=80&width=80&text=PS",
+      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop&crop=face",
       content:
         "JVM Shyamali has been instrumental in my daughter's academic and personal growth. The teachers are dedicated and the environment is nurturing.",
       rating: 5,
@@ -14,7 +14,7 @@ const Testimonials: React.FC = () => {
     {
       name: "Rahul Kumar",
       role: "Alumni, IIT Delhi",
-      image: "/placeholder.svg?height=80&width=80&text=RK",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
       content:
         "The strong foundation I received at JVM helped me crack JEE and pursue my engineering dreams. Forever grateful to my teachers.",
       rating: 5,
@@ -22,7 +22,7 @@ const Testimonials: React.FC = () => {
     {
       name: "Dr. Anjali Singh",
       role: "Parent & Local Doctor",
-      image: "/placeholder.svg?height=80&width=80&text=AS",
+      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop&crop=face",
       content:
         "The school's focus on both academics and character building is commendable. My son has developed excellent values along with knowledge.",
       rating: 5,

@@ -10,7 +10,7 @@ const LatestNews: React.FC = () => {
       category: "Admission",
       description: "Direct admission process for Class XI students has begun. Limited seats available.",
       urgent: true,
-      image: "/placeholder.svg?height=200&width=300&text=Admission",
+      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=250&fit=crop&crop=center",
     },
     {
       title: "Annual Sports Day & Cultural Fest 2024",
@@ -18,7 +18,7 @@ const LatestNews: React.FC = () => {
       category: "Events",
       description: "Join us for our grand annual celebration featuring sports competitions and cultural programs.",
       urgent: false,
-      image: "/placeholder.svg?height=200&width=300&text=Sports+Day",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&crop=center",
     },
     {
       title: "Outstanding Board Results 2024",
@@ -26,7 +26,7 @@ const LatestNews: React.FC = () => {
       category: "Achievement",
       description: "Our students achieved 95% pass rate in CBSE Class X and XII examinations.",
       urgent: false,
-      image: "/placeholder.svg?height=200&width=300&text=Results",
+      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=250&fit=crop&crop=center",
     },
   ]
 
@@ -58,13 +58,12 @@ const LatestNews: React.FC = () => {
                 )}
                 <div className="absolute top-4 right-4">
                   <span
-                    className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      item.category === "Admission"
+                    className={`px-3 py-1 rounded-full text-sm font-medium ${item.category === "Admission"
                         ? "bg-emerald-100 text-emerald-700"
                         : item.category === "Events"
                           ? "bg-blue-100 text-blue-700"
                           : "bg-amber-100 text-amber-700"
-                    }`}
+                      }`}
                   >
                     {item.category}
                   </span>

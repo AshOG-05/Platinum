@@ -38,7 +38,7 @@ const About: React.FC = () => {
   ]
 
   return (
-    <div className="pt-24">
+    <div className="pt-28 md:pt-32">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-emerald-50 to-teal-50">
         <div className="container mx-auto px-4">

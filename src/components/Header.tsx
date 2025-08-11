@@ -21,9 +21,12 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as HTMLElement
-      if (!target.closest('.dropdown-container')) {
-        setActiveDropdown(null)
+      // Only auto-close dropdowns on desktop where hover/click menus are used
+      if (typeof window !== 'undefined' && window.innerWidth >= 1024) {
+        const target = event.target as HTMLElement
+        if (!target.closest('.dropdown-container')) {
+          setActiveDropdown(null)
+        }
       }
     }
 
@@ -152,7 +155,7 @@ const Header: React.FC = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-2 ml-auto">
+             <nav className="hidden lg:flex items-center space-x-2 ml-auto" role="navigation" aria-label="Main">
               {navItems.map((item) => (
                 <div key={item.name} className="relative group dropdown-container">
                   {item.dropdown ? (
@@ -162,6 +165,10 @@ const Header: React.FC = () => {
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
                       <button
+                        type="button"
+                        aria-haspopup="menu"
+                        aria-expanded={activeDropdown === item.name}
+                        onClick={() => handleDropdownToggle(item.name)}
                         className={`flex items-center space-x-2 px-4 py-2 rounded-xl font-medium transition-all duration-300 relative ${location.pathname === item.path || activeDropdown === item.name
                           ? "text-emerald-600 bg-emerald-50 shadow-md"
                           : "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50"
@@ -178,10 +185,14 @@ const Header: React.FC = () => {
                       </button>
 
                       {/* Dropdown Menu */}
-                      <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 ${activeDropdown === item.name
-                        ? "opacity-100 visible transform translate-y-0"
-                        : "opacity-0 invisible transform -translate-y-2"
-                        }`}>
+                      <div
+                        role="menu"
+                        className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden z-50 transition-all duration-200 ${activeDropdown === item.name
+                          ? "opacity-100 visible translate-y-0"
+                          : "opacity-0 invisible -translate-y-1"
+                          }`}
+                        onMouseLeave={() => setActiveDropdown(null)}
+                      >
                         <div className="py-2">
                           {item.dropdown.map((dropdownItem, index) => (
                             <Link
@@ -228,6 +239,8 @@ const Header: React.FC = () => {
             <button
               className="lg:hidden p-3 rounded-xl hover:bg-emerald-50 transition-all duration-200 border border-gray-200"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
             >
               {isMenuOpen ? (
                 <X size={24} className="text-gray-700" />
@@ -240,14 +253,14 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden transition-all duration-500 ${isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
-            } overflow-hidden bg-gradient-to-br from-white to-emerald-50 border-t border-emerald-100`}
+          id="mobile-menu"
+          className={`lg:hidden ${isMenuOpen ? "block" : "hidden"} bg-gradient-to-br from-white to-emerald-50 border-t border-emerald-100 z-40`}
         >
-          <nav className="container mx-auto px-4 py-6 space-y-2">
+          <nav className="w-full px-4 py-6 space-y-2">
             {navItems.map((item) => (
               <div key={item.name}>
                 {item.dropdown ? (
-                  <div>
+                  <div className="dropdown-container">
                     <button
                       onClick={() => handleDropdownToggle(`mobile-${item.name}`)}
                       className={`w-full flex items-center justify-between px-6 py-4 rounded-xl font-medium transition-all duration-200 ${location.pathname === item.path || activeDropdown === `mobile-${item.name}`

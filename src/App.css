@@ -167,3 +167,11 @@ img {
     display: none !important;
   }
 }
+
+/* Mobile: shrink floating language button injected by gtranslate */
+@media (max-width: 640px) {
+  .gtranslate_wrapper {
+    transform: scale(0.8);
+    transform-origin: bottom right;
+  }
+}

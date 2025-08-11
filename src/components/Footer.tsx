@@ -43,10 +43,10 @@ const Footer: React.FC = () => {
   ]
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white antialiased selection:bg-emerald-500/20 selection:text-white">
       {/* Main Footer */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <div className="container mx-auto max-w-7xl px-4 pt-24 pb-16 md:pt-32 lg:pt-40">
+        <div className="grid grid-cols-1 items-start md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* School Info */}
           <div className="lg:col-span-1 space-y-6">
             <div className="flex items-center space-x-3 mb-6">
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
                 <a
                   key={index}
                   href={social.href}
-                  className={`w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg border border-gray-700 hover:border-emerald-500 ${social.color}`}
+                  className={`w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg border border-gray-700 hover:border-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/40 ${social.color}`}
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -79,18 +79,19 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <h4 className="text-xl font-bold mb-6 text-emerald-400 relative">
+            <h4 className="text-xl font-bold mb-6 pb-2 text-emerald-400 relative">
               Quick Links
-              <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
+              <div className="absolute bottom-0 left-0 w-12 md:w-16 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
             </h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.path}
-                    className="text-gray-300 hover:text-emerald-400 transition-all duration-300 flex items-center group text-sm hover:translate-x-2"
+                    className="text-gray-300 hover:text-emerald-400 transition-all duration-300 flex items-center group text-sm hover:translate-x-1"
+                    aria-label={`Go to ${link.name}`}
                   >
-                    <span className="w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-6 mr-0 group-hover:mr-3 rounded-full"></span>
+                    <span className="w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-6 mr-0 group-hover:mr-3 rounded-full flex-shrink-0"></span>
                     {link.name}
                   </Link>
                 </li>
@@ -100,18 +101,19 @@ const Footer: React.FC = () => {
 
           {/* Programs */}
           <div className="space-y-6">
-            <h4 className="text-xl font-bold mb-6 text-emerald-400 relative">
+            <h4 className="text-xl font-bold mb-6 pb-2 text-emerald-400 relative">
               Programs
-              <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
+              <div className="absolute bottom-0 left-0 w-12 md:w-16 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
             </h4>
             <ul className="space-y-3">
               {programs.map((program, index) => (
                 <li key={index}>
                   <Link
                     to={program.path}
-                    className="text-gray-300 hover:text-emerald-400 transition-all duration-300 flex items-center group text-sm hover:translate-x-2"
+                    className="text-gray-300 hover:text-emerald-400 transition-all duration-300 flex items-center group text-sm hover:translate-x-1"
+                    aria-label={`Go to ${program.name}`}
                   >
-                    <span className="w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-6 mr-0 group-hover:mr-3 rounded-full"></span>
+                    <span className="w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-6 mr-0 group-hover:mr-3 rounded-full flex-shrink-0"></span>
                     {program.name}
                   </Link>
                 </li>
@@ -121,9 +123,9 @@ const Footer: React.FC = () => {
 
           {/* Contact Info */}
           <div className="space-y-6">
-            <h4 className="text-xl font-bold mb-6 text-emerald-400 relative">
+            <h4 className="text-xl font-bold mb-6 pb-2 text-emerald-400 relative">
               Contact Us
-              <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
+              <div className="absolute bottom-0 left-0 w-12 md:w-16 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
             </h4>
             <div className="space-y-4">
               <div className="flex items-center space-x-3 group">
@@ -166,11 +168,16 @@ const Footer: React.FC = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 text-white text-sm placeholder-gray-500 transition-all duration-300"
+                  aria-label="Email address"
+                  autoComplete="email"
+                  inputMode="email"
+                  spellCheck={false}
                   required
                 />
                 <button
                   type="submit"
-                  className="w-full px-4 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-xl hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 font-medium text-sm flex items-center justify-center space-x-2"
+                  className="w-full px-4 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-xl hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 font-medium text-sm flex items-center justify-center space-x-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                  disabled={!email}
                 >
                   {isSubscribed ? (
                     <>
@@ -204,7 +211,7 @@ const Footer: React.FC = () => {
                 CBSE Affiliation No: 3430XXX | Estd. 1995
               </p>
             </div>
-            <div className="flex flex-wrap justify-center md:justify-end items-center space-x-6">
+            <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-6">
               <Link
                 to="#"
                 className="text-gray-400 hover:text-emerald-400 text-sm transition-all duration-300 hover:underline underline-offset-4"

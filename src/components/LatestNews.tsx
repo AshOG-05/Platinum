@@ -49,7 +49,7 @@ const LatestNews: React.FC = () => {
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
               <div className="relative">
-                <img src={item.image || "/placeholder.svg"} alt={item.title} className="w-full h-48 object-cover" />
+                <img src={item.image || "/placeholder.svg"} alt={item.title} className="w-full h-40 sm:h-48 object-cover" />
                 {item.urgent && (
                   <div className="absolute top-4 left-4 flex items-center space-x-1 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                     <Bell size={14} />

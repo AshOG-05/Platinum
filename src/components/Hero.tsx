@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-6 text-center lg:text-left">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start">
                 <Award className="text-emerald-500 mr-3" size={24} />
                 <div>
@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
               <img
                 src="https://images.unsplash.com/photo-1614793319738-bde496bbe85e?q=80&w=2350&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Students in classroom"
-                className="w-full h-96 object-cover rounded-2xl shadow-lg"
+                className="w-full h-56 sm:h-72 md:h-96 object-cover rounded-2xl shadow-lg"
               />
 
               {/* Floating Cards */}

@@ -88,8 +88,8 @@ const Header: React.FC = () => {
   return (
     <>
       {/* Top Info Bar */}
-      <div className="bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-600 text-white py-3 text-sm border-b border-emerald-500/20">
-        <div className="container mx-auto px-4">
+      <div className="hidden md:block bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-600 text-white py-3 text-sm border-b border-emerald-500/20">
+        <div className="w-full px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-2 lg:space-y-0">
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-8">
               <button
@@ -133,11 +133,11 @@ const Header: React.FC = () => {
         className={`sticky top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-xl" : "bg-white shadow-md"
           }`}
       >
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between py-4">
+        <div className="w-full px-4 lg:px-8">
+          <div className="flex items-center justify-between py-1.5">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group">
-              <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 p-2">
+              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 p-2">
                 <img
                   src="https://plus.unsplash.com/premium_photo-1668902827064-9d77c9750674?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Platinum Academy Logo"
@@ -152,7 +152,7 @@ const Header: React.FC = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-4">
+            <nav className="hidden lg:flex items-center space-x-2 ml-auto">
               {navItems.map((item) => (
                 <div key={item.name} className="relative group dropdown-container">
                   {item.dropdown ? (
@@ -162,11 +162,13 @@ const Header: React.FC = () => {
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
                       <button
-                        className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 relative ${location.pathname === item.path || activeDropdown === item.name
+                        className={`flex items-center space-x-2 px-4 py-2 rounded-xl font-medium transition-all duration-300 relative ${location.pathname === item.path || activeDropdown === item.name
                           ? "text-emerald-600 bg-emerald-50 shadow-md"
                           : "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50"
                           }`}
                       >
+                        {/* reduced padding for shorter tab height */}
+                        
                         <span>{item.name}</span>
                         <ChevronDown
                           size={16}
@@ -200,7 +202,7 @@ const Header: React.FC = () => {
                   ) : (
                     <Link
                       to={item.path}
-                      className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 relative ${location.pathname === item.path
+                      className={`px-4 py-2 rounded-xl font-medium transition-all duration-300 relative ${location.pathname === item.path
                         ? "text-emerald-600 bg-emerald-50 shadow-md"
                         : "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50"
                         }`}
@@ -212,10 +214,10 @@ const Header: React.FC = () => {
               ))}
 
               {/* CTA Button */}
-              <div className="ml-8 flex items-center space-x-3">
+              <div className="ml-4 flex items-center">
                 <Link
                   to="/admission"
-                  className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:from-emerald-600 hover:to-teal-700"
+                  className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:from-emerald-600 hover:to-teal-700"
                 >
                   Apply Now
                 </Link>

@@ -43,9 +43,13 @@ const Footer: React.FC = () => {
   ]
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white antialiased selection:bg-emerald-500/20 selection:text-white">
-      {/* Main Footer */}
-      <div className="container mx-auto max-w-7xl px-4 pt-24 pb-16 md:pt-32 lg:pt-40">
+    <>
+      <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white antialiased selection:bg-emerald-500/20 selection:text-white">
+        {/* Black spacer area */}
+        <div className="w-full h-14 md:h-40 lg:h-48"></div>
+        
+        {/* Main Footer */}
+        <div className="container mx-auto max-w-7xl px-4 pb-16">
         <div className="grid grid-cols-1 items-start md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* School Info */}
           <div className="lg:col-span-1 space-y-6">
@@ -239,6 +243,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
+    </>
   )
 }
 
